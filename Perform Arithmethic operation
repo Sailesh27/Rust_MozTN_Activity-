@@ -1,0 +1,23 @@
+use std::io;
+use std::{i32};
+fn main() 
+{
+ println!("Enter the First Number?");
+ let mut input_1 = String::new();
+ io::stdin().read_line(&mut input_1)
+ .expect("Unable to read line");
+ println!("Enter the Second Number ? ");
+ let mut input_2 = String::new();
+ io::stdin().read_line(&mut input_2)
+ .expect("Unable to read line");
+ let input_1_int: i32 = input_1.trim().parse()
+ .ok()
+ .expect("Please Enter a Number!");
+ let input_2_int: i32 = input_2.trim().parse()
+ .ok()
+ .expect("Please Enter a Number!");
+ println!("Addtion is: {}", input_1_int + input_2_int);
+ println!("Subtraction is: {}", input_1_int- input_2_int);
+ println!("Mutliplication is: {}", input_1_int * input_2_int);
+ println!("Division is: {}", input_1_int / input_2_int);
+}
